@@ -1,0 +1,14 @@
+{
+  "visits": 1250,
+  "lastUpdated": "2025-10-26T12:00:00Z",
+  "events": [
+    { "timestamp": "2025-10-26T10:00:00Z", "tool": "merge", "event": "used" },
+    { "timestamp": "2025-10-26T10:15:00Z", "tool": "split", "event": "used" },
+    { "timestamp": "2025-10-26T10:30:00Z", "tool": "convert", "event": "used" },
+    { "timestamp": "2025-10-26T11:00:00Z", "tool": "merge", "event": "used" },
+    { "timestamp": "2025-10-26T11:15:00Z", "tool": "compress", "event": "used" },
+    { "timestamp": "2025-10-26T11:30:00Z", "tool": "rotate", "event": "used" },
+    { "timestamp": "2025-10-26T11:45:00Z", "tool": "merge", "event": "used" },
+    { "timestamp": "2025-10-26T12:00:00Z", "tool": "split", "event": "used" }
+  ]
+}

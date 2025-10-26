@@ -1,0 +1,46 @@
+### Dockerfile optimized for Next.js standalone output
+FROM node:20-bullseye AS builder
+ENV NEXT_TELEMETRY_DISABLED=1
+WORKDIR /app
+
+# Install build deps for native modules
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends python3 build-essential pkg-config git ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY package.json package-lock.json* ./
+RUN npm ci --legacy-peer-deps || npm install --legacy-peer-deps
+
+COPY . .
+
+# Build the Next app; with next.config.js output: 'standalone' this will populate .next/standalone
+RUN npm run build
+
+### Runtime image using the standalone output
+FROM node:20-bullseye-slim AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+
+# Minimal runtime deps commonly needed by image libraries
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates libvips42 libjpeg62-turbo libgif7 && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy standalone output from builder
+COPY --from=builder /app/.next/standalone/ .
+# Copy static assets
+COPY --from=builder /app/.next/static/ ./.next/static/
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/data ./data
+
+EXPOSE 3000
+
+# Create directories for uploads and logs (mount these as volumes in Coolify)
+RUN mkdir -p /app/uploads /app/logs
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s CMD wget -qO- --tries=1 http://127.0.0.1:3000/ || exit 1
+
+# The standalone build includes a small node server (server.js)
+CMD ["node", "server.js"]

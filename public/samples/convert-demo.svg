@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <g transform="translate(80,80)">
+    <rect x="0" y="0" width="360" height="240" rx="8" fill="#fff" stroke="#e5e7eb"/>
+    <rect x="420" y="0" width="360" height="240" rx="8" fill="#fff" stroke="#e5e7eb"/>
+    <rect x="840" y="0" width="240" height="240" rx="8" fill="#fff" stroke="#e5e7eb"/>
+    <text x="20" y="30" font-family="Inter, Arial" font-size="18" fill="#111827">Source.pdf</text>
+    <text x="440" y="30" font-family="Inter, Arial" font-size="18" fill="#111827">Converted.docx</text>
+    <text x="860" y="30" font-family="Inter, Arial" font-size="18" fill="#111827">Converted.txt</text>
+  </g>
+</svg>

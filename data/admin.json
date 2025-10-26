@@ -1,0 +1,47 @@
+{
+  "ga": "",
+  "adsense": {
+    "client": "",
+    "slot": "",
+    "metaName": "",
+    "accountId": "",
+    "publisherId": "",
+    "enabled": false
+  },
+  "monetag": {
+    "content": "REDACTED_MONETAG",
+    "enabled": true
+  },
+  "monetization": {
+    "metaName": "",
+    "accountId": "",
+    "publisherId": "",
+    "enabled": false,
+    "additionalMeta": {}
+  },
+  "adVendors": [
+    {
+      "name": "AdSense",
+      "enabled": false,
+      "client": "",
+      "slot": "",
+      "type": "google"
+    },
+    {
+      "name": "Monetag",
+      "enabled": true,
+      "content": "766706b563d2ad4bc0e602949af124c3",
+      "type": "meta"
+    }
+  ],
+  "superadmins": [
+    "Superadmin"
+  ],
+  "users": [],
+  "externalConversion": {
+    "url": "",
+    "apiKey": ""
+  },
+  "jwtSecret": "",
+  "databaseUrl": ""
+}

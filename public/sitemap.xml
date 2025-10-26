@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:3000/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/merge</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/split</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/convert</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/compress</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/protect</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/unlock</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/rotate</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/watermark</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/organize</loc>
+  </url>
+</urlset>

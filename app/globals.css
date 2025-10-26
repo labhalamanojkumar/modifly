@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Subtle brand/hero animations and small helper utilities */
+@keyframes float-up {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-6px); }
+	100% { transform: translateY(0); }
+}
+
+.animate-float {
+	animation: float-up 4s ease-in-out infinite;
+}
+
+.brand-gradient { background-clip: text; -webkit-background-clip: text; color: transparent; }
+
+.feature-icon {
+	width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center;
+	border-radius: 12px; background: linear-gradient(135deg,#EEF2FF, #FFF1F2);
+	box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}

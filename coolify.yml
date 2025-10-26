@@ -1,0 +1,22 @@
+# Sample Coolify deployment file (informational template)
+# Coolify does not require this file, but it's useful as a template for automated deploys.
+
+app:
+  name: modifly
+  dockerfilePath: ./Dockerfile.standalone
+  build:
+    command: npm ci --legacy-peer-deps && npm run build
+  startCommand: node server.js
+  port: 3000
+  env:
+    NODE_ENV: production
+    NEXT_TELEMETRY_DISABLED: '1'
+    PORT: '3000'
+    # Set these in Coolify's environment UI instead of committing them
+    # ADMIN_USER: Superadmin
+    # ADMIN_PASS: Adminuser@123
+    # ADMIN_JWT_SECRET: <secure>
+    # DATABASE_URL: <mysql://user:pass@host:port/db>
+  volumes:
+    - hostPath: /data/modifly
+      containerPath: /app/data

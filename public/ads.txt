@@ -1,0 +1,3 @@
+# ads.txt for Modifly
+# Replace PUBID with your AdSense publisher ID (pub-XXXXXXXXXXXXXXX)
+google.com, pub-PUBID, DIRECT, f08c47fec0942fa0

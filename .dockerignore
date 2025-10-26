@@ -1,0 +1,12 @@
+node_modules
+.next
+.env.local
+.env.*.local
+dist
+build
+coverage
+.git
+*.log
+public/samples/*
+test-output.txt
+tmp-out.txt
